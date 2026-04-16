@@ -1,6 +1,6 @@
 # Histopath CRC Detection
 
-An end-to-end **Computer-Aided Detection (CAD) system** for automated detection of colorectal cancer from H&E stained histopathology images. Built as part of an ICMR-aligned research initiative at VNIT Nagpur.
+An end-to-end **Computer-Aided Detection (CAD) system** for automated detection of colorectal cancer from H&E stained histopathology images.
 
 ---
 
