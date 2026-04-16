@@ -78,7 +78,7 @@ Raw H&E Slide
 histopath-crc-detection/
 │
 ├── stage1_stain_normalization/
-│   ├── macenko.py                 # Macenko normalizer (MATLAB-faithful port)
+│   ├── macenko.py                 # Macenko normalizer 
 │   ├── normalize_dataset.py       # Batch normalization with multiprocessing
 │   ├── find_best_reference.py     # Auto-select optimal reference image
 │   ├── visualize_normalization.py # Before/after comparison plots
