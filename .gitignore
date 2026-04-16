@@ -1,0 +1,114 @@
+# =============================================================
+# Colorectal Cancer CAD Pipeline — .gitignore
+# =============================================================
+
+# -------------------------------------------------------------
+# Data — never commit raw or processed image data
+# -------------------------------------------------------------
+data/raw/*
+data/normalized/*
+data/normalized_colon/*
+data/normalized_test/*
+data/patches/*
+data/sample/*
+
+# Keep folder structure via .gitkeep
+!data/raw/.gitkeep
+!data/normalized/.gitkeep
+!data/normalized_colon/.gitkeep
+!data/normalized_test/.gitkeep
+!data/patches/.gitkeep
+!data/sample/.gitkeep
+
+# Zip files inside data
+data/*.zip
+data/*.tar.gz
+
+# Large image dataset formats (only inside data folders)
+data/**/*.tif
+data/**/*.tiff
+data/**/*.jpg
+data/**/*.svs
+data/**/*.ndpi
+datasets/
+# -------------------------------------------------------------
+# Model Weights
+# -------------------------------------------------------------
+# Checkpoints — ignore weights but keep result images
+stage3_classification/checkpoints/*.pth
+stage3_classification/checkpoints/*.pt
+stage3_classification/checkpoints/*.ckpt
+stage4_grading/checkpoints/*.pth
+stage4_grading/checkpoints/*.pt
+stage4_grading/checkpoints/*.ckpt
+
+!stage3_classification/checkpoints/.gitkeep
+!stage3_classification/checkpoints/confusion_matrix.png
+!stage3_classification/checkpoints/gradcam_preview.png
+!stage3_classification/checkpoints/training_curves.png
+!stage3_classification/checkpoints/training_history.json
+!stage4_grading/checkpoints/.gitkeep
+
+# -------------------------------------------------------------
+# Archives
+# -------------------------------------------------------------
+*.zip
+*.tar.gz
+*.tar
+
+# -------------------------------------------------------------
+# Python
+# -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# -------------------------------------------------------------
+# Outputs — generated files
+# -------------------------------------------------------------
+outputs/
+
+# -------------------------------------------------------------
+# OS files
+# -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -------------------------------------------------------------
+# IDE
+# -------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -------------------------------------------------------------
+# Misc
+# -------------------------------------------------------------
+folderstructure.md
